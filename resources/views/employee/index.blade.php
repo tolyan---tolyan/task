@@ -32,7 +32,7 @@
                                 <td> {{ $employee->salary}} </td>
                                
                                 
-                                
+
                                 <td> 
                                 {!! Form::open(array('route' => ['employee.destroy', $employee->id], 'method' => 'DELETE')) !!}
                                  
@@ -53,7 +53,9 @@
                 </div>
             </div>
             {{ link_to_route('employee.create', 'Add new employee',null,['class' => 'btn btn-success'])}} 
-
+            <br>
+            <a href='{!! url('/download'); !!}'>Dowload xls file</a>
+       
         </div>
     </div>
 </div>
