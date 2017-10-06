@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('ExportWorkers', 'ExcelController@ExportWorkers');
+Route::get('ShowWorkers', 'ExcelController@ShowWorkers');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('employee', 'EmployeeController');
